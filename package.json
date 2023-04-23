@@ -1,7 +1,7 @@
 {
-  "name": "fluid-text",
+  "name": "fluid-text-plugin",
   "version": "0.0.1",
-  "description": "tbd",
+  "description": "Tailwind utility class plugin for sizing text smoothly between your breakpoints.",
   "main": "fluid-text.js",
   "files": [
     "!tests/"

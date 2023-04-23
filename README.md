@@ -38,6 +38,8 @@ Or, you can hire us for training, consulting, or development. [Set up a free con
 
 ## Setup
 
+`npm install fluid-text-plugin`
+
 ### Tailwind Plugin
 
 In your `tailwind.config.js` file:
