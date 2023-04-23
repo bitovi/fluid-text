@@ -1,0 +1,9 @@
+{
+  "name": "fluid-text-uno-tests",
+  "version": "0.0.0",
+  "author": "Jane Ori",
+  "devDependencies": {
+    "@unocss/cli": "^0.51.6",
+    "unocss": "^0.51.6"
+  }
+}

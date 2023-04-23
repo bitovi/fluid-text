@@ -1,0 +1,84 @@
+<!doctype html>
+<html style="width: 1600px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/output.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+    iframe {
+      border: none;
+      outline: 1px solid #ccc;
+      padding-block: 1rem;
+      height: 600px;
+      width: 0;
+      min-width: 250px;
+      resize: horizontal;
+      max-width: 1600px;
+    }
+    #x {
+      position: relative;
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    #x::before {
+      content: var(--content, "");
+      position: absolute;
+      right: 100%;
+      top: -50px;
+      width: 70px;
+      height: 45px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid red;
+    }
+    #x::after {
+      content: var(--content, "");
+      position: absolute;
+      right: 100%;
+      bottom: -60px;
+      width: 70px;
+      height: 45px;
+      padding-top: 15px;
+      border-top: 1px solid red;
+    }
+  </style>
+</head>
+<body style="transform: scale(0.7);">
+  <h1 class="text-3xl">
+    <span style="opacity: 0.3;">class="</span>fluid-text-[4-7-sm-6-md-4-7-xl]<span style="opacity: 0.3;">"</span>
+  </h1>
+  <br>
+  <br>
+  <br>
+  <div style="display: grid; grid-template-columns: auto 1fr; position: relative; isolation: isolate;">
+    <div style="height: 50px;">
+      <div style="position: absolute; left: 0; right: 0; height: 50px; z-index: -1;">
+        <img src="https://i.imgur.com/JhMlLca.png" style="width: 1600px;">
+      </div>
+    </div>
+    <div id="x" style="grid-row: span 3; background: linear-gradient(to right, red 2px, white 2px); opacity: 0.75;"></div>
+    <iframe src="./uno/index.html" style="" allow-same-origin></iframe>
+    <div style="height: 50px;">
+      <div style="position: absolute; left: 0; right: 0; height: 50px; z-index: -1;">
+        <img src="https://i.imgur.com/qb8Iltr.png" style="width: 1600px;">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const frame = document.querySelector("iframe")
+    const loadfn = () => {
+      const output = document.querySelector("#x")
+      const ifw = frame.contentWindow
+      const ifd = frame.contentDocument
+      const showVal = () => {
+        const size = (parseFloat(ifw.getComputedStyle(ifd.querySelector("ul"))["font-size"]) / 4).toFixed(2)
+        output.style.setProperty("--content", `"${size.replace(/\.?0+$/, "")}"`)
+      }
+      ifw.addEventListener("resize", showVal)
+      showVal()
+    }
+    frame.addEventListener("load", loadfn)
+  </script>
+</body>
+</html>

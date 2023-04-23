@@ -1,0 +1,30 @@
+{
+  "name": "fluid-text",
+  "version": "0.0.1",
+  "description": "tbd",
+  "main": "fluid-text.js",
+  "files": [
+    "!tests/"
+  ],
+  "scripts": {
+    "buildtests": "chmod +x tests/buildtests.sh && source ./tests/buildtests.sh",
+    "test": "npm run buildtests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitovi/fluid-text.git"
+  },
+  "keywords": [
+    "font-size",
+    "responsive",
+    "design",
+    "css",
+    "tailwind"
+  ],
+  "author": "Jane Ori",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bitovi/fluid-text/issues"
+  },
+  "homepage": "https://github.com/bitovi/fluid-text#readme"
+}

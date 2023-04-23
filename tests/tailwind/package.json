@@ -1,0 +1,8 @@
+{
+  "name": "fluid-text-tw-tests",
+  "version": "0.0.0",
+  "author": "Jane Ori",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}
