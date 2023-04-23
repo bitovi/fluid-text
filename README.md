@@ -14,7 +14,7 @@ What happens right after the largest tablet layout though? - A squished desktop 
 
 Until now...
 
-`fluid-text` gives your team a single Tailwind* class name solution to this challenge.
+Our `fluid-text-plugin` gives your team a single Tailwind* class name solution to this challenge.
 
 <sub>* also works with UnoCSS and as an independent utility you can call without needing any build system at all.</sub>
 
@@ -50,7 +50,7 @@ In your `tailwind.config.js` file:
 
 ```js
   const plugin = require('tailwindcss/plugin')
-  const { fluidText } = require('fluid-text/fluid-text')
+  const { fluidText } = require('fluid-text-plugin/fluid-text')
 
   module.exports = {
     // ...
@@ -60,7 +60,7 @@ In your `tailwind.config.js` file:
   }
 ```
 
-Then use the fluid-text utility `class` anywhere you use tailwind:
+Then use the `fluid-text` utility `class` anywhere you use tailwind:
 
 `fluid-text-[4-7-sm-6-md-4-7-xl]`
 
@@ -70,7 +70,7 @@ In your `uno.config.js` file:
 
 ```js
   import { defineConfig } from 'unocss'
-  import { fluidText } from 'fluid-text/fluid-text'
+  import { fluidText } from 'fluid-text-plugin/fluid-text'
 
   export default defineConfig({
     // ...
@@ -83,7 +83,7 @@ In your `uno.config.js` file:
   })
 ```
 
-Then use the fluid-text utility `class` anywhere you use UnoCSS:
+Then use the `fluid-text` utility `class` anywhere you use UnoCSS:
 
 `fluid-text-[4-7-sm-6-md-4-7-xl]`
 
@@ -129,7 +129,7 @@ If you need to scale decendant's properties relative to the fluid container's fo
 ## Using the utility functions without Tailwind or UnoCSS
 
 ```js
-  import { fluidText } from 'fluid-text/fluid-text'
+  import { fluidText } from 'fluid-text-plugin/fluid-text'
 
   const myBPs = { 'mobile': '640px', 'tablet': '968px', 'desktop': '1224px', 'battlestation': '1536px' }
 
