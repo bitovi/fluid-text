@@ -1,11 +1,12 @@
 {
   "name": "fluid-text-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tailwind utility class plugin for sizing text smoothly between your breakpoints.",
   "main": "fluid-text.js",
   "files": [
     "!tests/"
   ],
+  "type": "module",
   "scripts": {
     "buildtests": "chmod +x tests/buildtests.sh && source ./tests/buildtests.sh",
     "test": "npm run buildtests"
