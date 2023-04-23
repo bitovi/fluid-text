@@ -1,4 +1,8 @@
-# fluid-text
+# fluid-text-plugin
+
+A fluid-text plugin for Tailwind, UnoCSS, and as utility functions for other ecosystems.
+
+----
 
 Web designs are often polished & delivered targeting your largest mobile, tablet, and desktop view widths.
 
