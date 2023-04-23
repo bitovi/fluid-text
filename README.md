@@ -14,7 +14,7 @@ Until now...
 
 <sub>* also works with UnoCSS and as an independent utility you can call without needing any build system at all.</sub>
 
-<img src="https://i.imgur.com/9A7nGwg.gif" alt="animated example of fluid text changing size in a resizing window">
+![animated example of fluid text changing size in a resizing window](https://user-images.githubusercontent.com/7545075/233866716-c6072547-eb14-450a-855a-5b0d53235d76.gif)
 
 ## Testimonials
 
@@ -107,13 +107,10 @@ One number between breakpoints means hold that size the whole range.
 
 The behavior of this class `fluid-text-[4-6-sm-md-4-9-lg]` is:
 
-If the screen is 0 width, the font size is `4 (x 4px)`.
-
-From 0, the font-size will increase up to `6 (x 4px)` until right before the `sm` breakpoint.
-
-Between `sm` and `md`, the size will not grow but remain 6.
-
-Right after the `md` breakpoint, the size becomes `4` and grows to `9`, reaching `9` at the `lg` breakpoint.
+* If the screen is 0 width, the font size is `4 (x 4px)`.
+* From 0, the font-size will increase up to `6 (x 4px)` until right before the `sm` breakpoint.
+* Between `sm` and `md`, the size will not grow but remain 6.
+* Right after the `md` breakpoint, the size becomes `4` and grows to `9`, reaching `9` at the `lg` breakpoint.
 
 Ommitting `-lg` means the font will reach size `9` as soon as the screen hits your largest breakpoint.
 
